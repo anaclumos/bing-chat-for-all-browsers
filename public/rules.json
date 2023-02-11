@@ -14,9 +14,7 @@
     },
     "condition": {
       "regexFilter": ".*bing\\.com.*",
-      "resourceTypes": [
-        "main_frame"
-      ]
+      "resourceTypes": ["main_frame"]
     }
   }
 ]
