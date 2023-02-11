@@ -8,6 +8,14 @@
       "js/background.js"
     ]
   },
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "150": "icon150.png",
+    "192": "icon192.png",
+    "512": "icon512.png",
+    "1024": "icon1024.png"
+  },
   "permissions": [
     "webRequest",
     "webRequestBlocking",
