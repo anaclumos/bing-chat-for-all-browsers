@@ -4,13 +4,8 @@ const CopyPlugin = require("copy-webpack-plugin");
 const srcDir = path.join(__dirname, "..", "src");
 
 module.exports = {
-    entry: {
-        background: path.join(srcDir, 'background.ts'),
-    },
-    output: {
-        path: path.join(__dirname, "../dist/js"),
-        filename: "[name].js",
-    },
+    entry: {},
+    output: {},
     optimization: {
         splitChunks: {
             name: "vendor",
