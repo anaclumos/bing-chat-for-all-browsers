@@ -1,35 +1,15 @@
 {
-  "manifest_version": 3,
-
-  "name": "Chrome Extension TypeScript Starter",
-  "description": "Chrome Extension, TypeScript, Visual Studio Code",
+  "manifest_version": 2,
+  "name": "Bing Chat for All Browsers",
+  "description": "Bing Chat for All Browsers",
   "version": "1.0",
-
-  "options_ui": {
-    "page": "options.html"
-  },
-
-  "action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
-  },
-
-  "content_scripts": [
-      {
-          "matches": ["<all_urls>"],
-          "js": ["js/vendor.js", "js/content_script.js"]
-      }
-  ],
-
   "background": {
-    "service_worker": "js/background.js"
+    "scripts": [
+      "js/background.js"
+    ]
   },
-
   "permissions": [
-    "storage"
-  ],
-
-  "host_permissions": [
-    "<all_urls>"
+    "webRequest",
+    "webRequestBlocking"
   ]
 }
