@@ -1,7 +1,7 @@
 {
-  "name": "chrome-extension-typescript-starter",
+  "name": "bing-chat-for-all-browsers",
   "version": "1.0.0",
-  "description": "chrome-extension-typescript-starter",
+  "description": "bing-chat-for-all-browsers",
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
@@ -14,7 +14,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chibat/chrome-extension-typescript-starter.git"
+    "url": "https://github.com/anaclumos/bing-chat-for-all-browsers.git"
   },
   "dependencies": {
     "react": "^17.0.1",
