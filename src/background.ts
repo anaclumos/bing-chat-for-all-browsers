@@ -1,8 +1,7 @@
-import BlockingResponse = chrome.webRequest.BlockingResponse
-import WebRequestHeadersDetails = chrome.webRequest.WebRequestHeadersDetails
+import { browser } from "webextension-polyfill-ts"
 
-chrome.webRequest.onBeforeSendHeaders.addListener(
-  (details: WebRequestHeadersDetails): BlockingResponse | void => {
+browser.webRequest.onBeforeSendHeaders.addListener(
+  (details) => {
     const { requestHeaders } = details
     if (requestHeaders) {
       const newHeaders = requestHeaders.map((header) => {
