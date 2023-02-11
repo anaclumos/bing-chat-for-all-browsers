@@ -10,6 +10,8 @@
   },
   "permissions": [
     "webRequest",
-    "webRequestBlocking"
+    "webRequestBlocking",
+    "http://*.bing.com/*",
+    "https://*.bing.com/*"
   ]
 }
