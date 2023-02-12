@@ -1,12 +1,12 @@
-const webpack = require('webpack')
 const path = require('path')
-const CopyPlugin = require('copy-webpack-plugin')
 const srcDir = path.join(__dirname, '..', 'src')
 
 module.exports = {
-  entry: {},
+  entry: {
+    background: path.join(srcDir, 'background.ts'),
+  },
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.join(__dirname, '../dist/js'),
     filename: '[name].js',
   },
   optimization: {
@@ -29,10 +29,4 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
   },
-  plugins: [
-    new CopyPlugin({
-      patterns: [{ from: '.', to: '../dist', context: 'public' }],
-      options: {},
-    }),
-  ],
 }
