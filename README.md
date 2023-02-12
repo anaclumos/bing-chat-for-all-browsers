@@ -1,4 +1,7 @@
 # Bing Chat for All Browsers
 
-- Enable Bing Chat for All Browsers!
-- [Template](https://github.com/chibat/chrome-extension-typescript-starter)
+Use this extension to enable Bing Chat on all browsers!
+
+| Chrome                                          | Firefox                                           |
+| ----------------------------------------------- | ------------------------------------------------- |
+| ![Demo of Bing Chat on Chrome](misc/chrome.png) | ![Demo of Bing Chat on Firefox](misc/firefox.png) |

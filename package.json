@@ -8,7 +8,7 @@
     "build": "webpack --config webpack/webpack.chrome.js & webpack --config webpack/webpack.firefox.js",
     "clean": "rimraf dist",
     "test": "npx jest",
-    "style": "prettier --write \"**/*.{ts,tsx,json,js,jsx,css,scss,html}\""
+    "style": "prettier --write \"**/*.{ts,tsx,json,js,jsx,css,scss,html,md}\""
   },
   "author": "",
   "license": "MIT",
