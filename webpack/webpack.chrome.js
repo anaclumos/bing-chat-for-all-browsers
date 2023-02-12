@@ -13,14 +13,14 @@ module.exports = merge(common, {
     new CopyPlugin({
       patterns: [
         {
-          from: '.',
+          from: './public',
           to: ({ absoluteFilename }) => {
             if (absoluteFilename.endsWith('chrome.json')) {
-              return 'manifest.json'
+              return path.join(__dirname, '../dist/chrome') + '/manifest.json'
+            } else {
+              return path.join(__dirname, '../dist/chrome') + '/[name][ext]'
             }
-            return absoluteFilename
           },
-          context: 'public',
         },
       ],
     }),
