@@ -6,7 +6,7 @@ module.exports = {
     background: path.join(srcDir, 'background.ts'),
   },
   output: {
-    path: path.join(__dirname, '../dist/js'),
+    path: path.join(__dirname, '../release/js'),
     filename: '[name].js',
   },
   optimization: {

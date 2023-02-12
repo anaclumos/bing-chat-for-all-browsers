@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
     "build": "webpack --config webpack/webpack.chrome.js & webpack --config webpack/webpack.firefox.js",
-    "clean": "rimraf dist",
+    "clean": "rimraf release",
     "test": "npx jest",
     "style": "prettier --write \"**/*.{ts,tsx,json,js,jsx,css,scss,html,md}\""
   },

@@ -6,7 +6,7 @@ const common = require('./webpack.common.js')
 module.exports = merge(common, {
   mode: 'production',
   output: {
-    path: path.join(__dirname, '../dist/chrome/js'),
+    path: path.join(__dirname, '../release/chrome/js'),
     filename: '[name].js',
   },
   plugins: [
@@ -16,9 +16,9 @@ module.exports = merge(common, {
           from: './public',
           to: ({ absoluteFilename }) => {
             if (absoluteFilename.endsWith('chrome.json')) {
-              return path.join(__dirname, '../dist/chrome') + '/manifest.json'
+              return path.join(__dirname, '../release/chrome') + '/manifest.json'
             } else {
-              return path.join(__dirname, '../dist/chrome') + '/[name][ext]'
+              return path.join(__dirname, '../release/chrome') + '/[name][ext]'
             }
           },
         },

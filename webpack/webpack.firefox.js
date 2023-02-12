@@ -6,7 +6,7 @@ const common = require('./webpack.common.js')
 module.exports = merge(common, {
   mode: 'production',
   output: {
-    path: path.join(__dirname, '../dist/firefox/js'),
+    path: path.join(__dirname, '../release/firefox/js'),
     filename: '[name].js',
   },
   plugins: [
@@ -16,9 +16,9 @@ module.exports = merge(common, {
           from: './public',
           to: ({ absoluteFilename }) => {
             if (absoluteFilename.endsWith('firefox.json')) {
-              return path.join(__dirname, '../dist/firefox') + '/manifest.json'
+              return path.join(__dirname, '../release/firefox') + '/manifest.json'
             } else {
-              return path.join(__dirname, '../dist/firefox') + '/[name][ext]'
+              return path.join(__dirname, '../release/firefox') + '/[name][ext]'
             }
           },
         },
