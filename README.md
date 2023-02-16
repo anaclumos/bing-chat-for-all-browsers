@@ -13,10 +13,11 @@ Use this extension to enable Bing Chat on all browsers!
 > This extension cannot make you jump the queue to get access to the new Bing Chat!
 > If you don't have access to the new Bing Chat, you can join the waitlist at [bing.com/chat](https://bing.com/chat).
 
-## On Chrome
+## Chrome
 
 N/A. It should work out of the box!
 
-## On Firefox
+## Firefox
 
-Set `layout.css.overflow-overlay.enabled` to true in about:config, and update to the latest version of Firefox. [Relevant Issue](https://github.com/anaclumos/bing-chat-for-all-browsers/issues/1)
+Set `layout.css.overflow-overlay.enabled` [Link](about:config?filter=layout.css.overflow-overlay.enabled) to true in about:config, and update to the latest version of Firefox. [Relevant Issue](https://github.com/anaclumos/bing-chat-for-all-browsers/issues/1)
+

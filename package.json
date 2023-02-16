@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "webpack --config webpack/webpack.chrome.js & webpack --config webpack/webpack.firefox.js",
+    "build": "$npm_execpath run clean && webpack --config webpack/webpack.chrome.js & webpack --config webpack/webpack.firefox.js",
     "clean": "rimraf release",
     "test": "npx jest",
     "style": "prettier --write \"**/*.{ts,tsx,json,js,jsx,css,scss,html,md}\"",
-    "zip": "cd release && rm -f chrome.zip && rm -f firefox.zip && zip -m chrome.zip -r chrome && zip -m firefox.zip -r firefox"
+    "zip": "cd release && rm -f chrome.zip && rm -f firefox.zip && cd chrome && zip -r ../chrome.zip -m .DS_Store * && cd ../firefox && zip -r ../firefox.zip -m .DS_Store * && cd .. && rm -rf chrome && rm -rf firefox"
   },
   "author": "",
   "license": "MIT",
