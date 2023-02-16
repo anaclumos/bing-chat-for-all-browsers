@@ -9,7 +9,7 @@
     "clean": "rimraf release",
     "test": "npx jest",
     "style": "prettier --write \"**/*.{ts,tsx,json,js,jsx,css,scss,html,md}\"",
-    "zip": "cd release && zip -r chrome.zip chrome && zip -r firefox.zip firefox && rm -rf chrome firefox"
+    "zip": "cd release && rm -f chrome.zip && rm -f firefox.zip && zip -m chrome.zip -r chrome && zip -m firefox.zip -r firefox"
   },
   "author": "",
   "license": "MIT",
