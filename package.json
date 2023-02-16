@@ -8,7 +8,8 @@
     "build": "webpack --config webpack/webpack.chrome.js & webpack --config webpack/webpack.firefox.js",
     "clean": "rimraf release",
     "test": "npx jest",
-    "style": "prettier --write \"**/*.{ts,tsx,json,js,jsx,css,scss,html,md}\""
+    "style": "prettier --write \"**/*.{ts,tsx,json,js,jsx,css,scss,html,md}\"",
+    "zip": "cd release && zip -r chrome.zip chrome && zip -r firefox.zip firefox && rm -rf chrome firefox"
   },
   "author": "",
   "license": "MIT",
