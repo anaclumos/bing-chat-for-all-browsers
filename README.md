@@ -19,5 +19,5 @@ N/A. It should work out of the box!
 
 ## Firefox
 
-Set `layout.css.overflow-overlay.enabled` [Link](about:config?filter=layout.css.overflow-overlay.enabled) to true in about:config, and update to the latest version of Firefox. [Relevant Issue](https://github.com/anaclumos/bing-chat-for-all-browsers/issues/1)
+Set `layout.css.overflow-overlay.enabled` to true in about:config, and update to the latest version of Firefox. [Relevant Issue](https://github.com/anaclumos/bing-chat-for-all-browsers/issues/1)
 
