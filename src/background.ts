@@ -1,4 +1,6 @@
-chrome.webRequest.onBeforeSendHeaders.addListener(
+import { browser } from 'webextension-polyfill-ts'
+
+browser.webRequest.onBeforeSendHeaders.addListener(
   (details) => {
     const { requestHeaders } = details
     if (requestHeaders) {
@@ -18,3 +20,10 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
   { urls: ['*://*.bing.com/*'] },
   ['blocking', 'requestHeaders']
 )
+
+browser.runtime.onInstalled.addListener((object) => {
+  let externalUrl = 'http://github.com/anaclumos/bing-chat-for-all-browsers'
+  if (object.reason.toLowerCase().includes('install')) {
+    browser.tabs.create({ url: externalUrl })
+  }
+})
