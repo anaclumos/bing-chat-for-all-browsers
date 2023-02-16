@@ -9,8 +9,8 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
     if (!requestHeaders) return undefined
     const newHeaders = requestHeaders.map((header) => {
       if (header.name.toLowerCase() === 'user-agent') {
-        header.value = DESKTOP_UA
         if (header.value?.toLowerCase().includes('mobile')) header.value = MOBILE_UA
+        else header.value = DESKTOP_UA
       }
       return header
     })
