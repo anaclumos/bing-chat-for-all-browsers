@@ -7,10 +7,12 @@ const Popup = () => {
   return (
     <>
       <a
-        href="https://bing.com/chat"
-        target="_blank"
-        rel="noreferrer noopener nofollow"
-        style={{ textDecoration: 'none' }}
+        style={{ textDecoration: 'none', cursor: 'pointer' }}
+        onClick={() => {
+          chrome.tabs.create({
+            url: 'https://bing.com/chat',
+          })
+        }}
       >
         <div style={{ display: 'grid', placeItems: 'center', width: '300px', height: '100px' }}>
           <button
@@ -44,34 +46,39 @@ const Popup = () => {
       >
         Found a Bug?{' '}
         <a
-          href="https://github.com/anaclumos/bing-chat-for-all-browsers"
-          target="_blank"
-          rel="noreferrer noopener nofollow"
-          style={{ color: 'black', textDecoration: 'underline' }}
+          style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }}
+          onClick={() => {
+            chrome.tabs.create({
+              url: 'https://github.com/anaclumos/bing-chat-for-all-browsers',
+            })
+          }}
         >
           Let me know on GitHub
         </a>
-        {'.'}
-        <br />
-        Leave us a review for{' '}
+        {'. '}
+        Or, Leave us a review for{' '}
         <a
-          href="https://chrome.google.com/webstore/detail/bing-chat-for-all-browser/jofbglonpbndadajbafmmaklbfbkggpo"
-          target="_blank"
-          rel="noreferrer noopener nofollow"
-          style={{ color: 'black', textDecoration: 'underline' }}
+          style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }}
+          onClick={() => {
+            chrome.tabs.create({
+              url: 'https://chrome.google.com/webstore/detail/bing-chat-for-all-browser/jofbglonpbndadajbafmmaklbfbkggpo',
+            })
+          }}
         >
           Chrome
         </a>{' '}
         or{' '}
         <a
-          href="https://addons.mozilla.org/en-US/firefox/addon/bing-chat-for-all-browsers/"
-          target="_blank"
-          rel="noreferrer noopener nofollow"
-          style={{ color: 'black', textDecoration: 'underline' }}
+          style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }}
+          onClick={() => {
+            chrome.tabs.create({
+              url: 'https://addons.mozilla.org/en-US/firefox/addon/bing-chat-for-all-browsers/',
+            })
+          }}
         >
           Firefox
         </a>
-        .
+        . Thank you!
       </p>
     </>
   )
