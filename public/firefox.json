@@ -2,9 +2,12 @@
   "manifest_version": 2,
   "name": "Bing Chat for All Browsers",
   "description": "Bing Chat for All Browsers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "background": {
     "scripts": ["js/background.js"]
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
   },
   "icons": {
     "16": "icon16.png",
