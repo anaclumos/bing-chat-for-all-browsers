@@ -3,6 +3,7 @@ const srcDir = path.join(__dirname, '..', 'src')
 
 module.exports = {
   entry: {
+    popup: path.join(srcDir, 'popup.tsx'),
     background: path.join(srcDir, 'background.ts'),
   },
   output: {
@@ -23,6 +24,17 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
       },
     ],
   },
