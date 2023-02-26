@@ -13,22 +13,23 @@ On Firefox it will replace the entire user agent with a hard coded Chrome user a
 const MOBILE_UA_SUFFIX = 'EdgA/110.0.1587.41'
 const DESKTOP_UA_SUFFIX = 'Edg/110.0.100.0'
 
-const DESKTOP_UA_PREFIX = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
-const MOBILE_UA_PREFIX = 'Mozilla/5.0 (Linux; Android 13; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36'
+const DESKTOP_UA_PREFIX =
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+const MOBILE_UA_PREFIX =
+  'Mozilla/5.0 (Linux; Android 13; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36'
 
 //formulate the UserAgent
-const uaMaker = (suffix: string, isMobile: boolean) : string => {
-  if(navigator.userAgent.includes('Firefox')){
+const uaMaker = (suffix: string, isMobile: boolean): string => {
+  if (navigator.userAgent.includes('Firefox')) {
     //on Firefox, we replace the entire user agent with a hard coded Chrome user agent with the Microsoft Edge useragent suffix appended to it.
-    if(isMobile){
+    if (isMobile) {
       return `${MOBILE_UA_PREFIX} ${suffix}`
-    }else{
+    } else {
       return `${DESKTOP_UA_PREFIX} ${suffix}`
     }
-
-  }else{
+  } else {
     //on Chrome (and other chromium based browsers): it will simply append the Microsoft Edge useragent suffix to the user agent
-      return `${navigator.userAgent}${suffix}`
+    return `${navigator.userAgent}${suffix}`
   }
 }
 
