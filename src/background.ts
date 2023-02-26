@@ -3,7 +3,7 @@
 Microsoft Bing checks if the user agent is a represents a Chromium Browser (as Microsoft Edge is based on Chromium),
 then it checks if it is the Microsoft Edge Browser by using the suffix Microsoft Bing adds to the user agent to enable Bing Chat.
 
-This limitation of Microsoft Edge to only Microsoft Edge users is a synthetic limitation, as it is possible to spoof the user agent to make Bing Chat work on other browsers.
+This limitation of Bing Chat to only Microsoft Edge users is a synthetic limitation, as it is possible to spoof the user agent to make Bing Chat work on other browsers.
 
 On Chrome (and other chromium based browsers): it will simply append the Microsoft Edge useragent suffix to the user agent
 On Firefox it will replace the entire user agent with a hard coded Chrome user agent with the Microsoft Edge useragent suffix appended to it.
