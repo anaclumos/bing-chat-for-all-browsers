@@ -19,7 +19,3 @@ N/A. It should work out of the box!
 - ‼️ Update to the latest version of Firefox!
 
 Otherwise, the scrolling will not work! 💔
-
-## Thank you for the support!
-
-<img style="vertical-align:middle;" alt="You need a Microsoft account that has access to the new Bing Chat to use this extension!" src="https://user-images.githubusercontent.com/31657298/220756383-e0d1ae3f-37c4-46b3-990b-7670c02c378a.png">
