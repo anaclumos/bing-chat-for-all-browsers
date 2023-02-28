@@ -6,7 +6,7 @@
 > **You need a Microsoft account that has access to the new Bing Chat to use this extension!**
 > If you don't have access to the new Bing Chat, you can join the waitlist at [bing.com/chat](https://bing.com/chat).
 
-<img style="vertical-align:middle;" alt="You need a Microsoft account that has access to the new Bing Chat to use this extension!" align="right" src="https://user-images.githubusercontent.com/31657298/220756383-e0d1ae3f-37c4-46b3-990b-7670c02c378a.png" width="600px">
+<img style="vertical-align:middle;" alt="You need a Microsoft account that has access to the new Bing Chat to use this extension!" align="right" src="https://user-images.githubusercontent.com/31657298/220756383-e0d1ae3f-37c4-46b3-990b-7670c02c378a.png" width="400px">
 
 ## [Chrome](https://chrome.google.com/webstore/detail/bing-chat-for-all-browser/jofbglonpbndadajbafmmaklbfbkggpo)
 
