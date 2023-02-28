@@ -1,4 +1,4 @@
-<img style="vertical-align:middle;" align="right" src="public/icon1024.png" width="100px">
+<img style="vertical-align:middle;" align="right" src="public/icon1024.png" width="80px">
 
 # Bing Chat for All Browsers
 
