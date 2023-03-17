@@ -40,7 +40,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
     const newHeaders = requestHeaders.map((header) => {
       if (header.name.toLowerCase() === 'user-agent') {
         if (header.value?.toLowerCase().includes('mobile')) header.value = uaMaker(MOBILE_UA_SUFFIX, true)
-        else header.value = uaMaker(MOBILE_UA_SUFFIX, false)
+        else header.value = uaMaker(DESKTOP_UA_SUFFIX, false)
       }
       return header
     })
