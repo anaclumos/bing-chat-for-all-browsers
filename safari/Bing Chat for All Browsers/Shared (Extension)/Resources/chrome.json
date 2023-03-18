@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Bing Chat for All Browsers",
+  "description": "Bing Chat for All Browsers",
+  "version": "1.0.5",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "128": "icon128.png",
+    "192": "icon192.png",
+    "512": "icon512.png",
+    "1024": "icon1024.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "permissions": ["webRequest", "declarativeNetRequest"],
+  "host_permissions": ["http://*.bing.com/*", "https://*.bing.com/*"]
+}
