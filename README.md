@@ -22,5 +22,5 @@ Otherwise, the scrolling will not work! 💔
 
 ## Troubleshooting
 
-- Clear the cache and cookies.
+- Clear the cache and cookies on bing.com.
 - Whitelist bing.com if you have any Adblock or VPN.
