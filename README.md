@@ -19,3 +19,8 @@ N/A. It should work out of the box!
 - ‼️ Update to the latest version of Firefox!
 
 Otherwise, the scrolling will not work! 💔
+
+## Troubleshooting
+
+- Clear the cache and cookies.
+- Whitelist bing.com if you have any Adblock or VPN.
