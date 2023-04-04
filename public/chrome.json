@@ -23,6 +23,6 @@
       }
     ]
   },
-  "permissions": ["webRequest", "declarativeNetRequest"],
+  "permissions": ["webRequest", "declarativeNetRequestWithHostAccess"],
   "host_permissions": ["http://*.bing.com/*", "https://*.bing.com/*"]
 }

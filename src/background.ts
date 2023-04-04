@@ -11,7 +11,7 @@ On Firefox it will replace the entire user agent with a hard coded Chrome user a
 
 //Microsoft Edge has two user agent suffixes, one for mobile and one for desktop
 const MOBILE_UA_SUFFIX = 'EdgA/110.0.1587.41'
-const DESKTOP_UA_SUFFIX = 'Edg/110.0.100.0'
+const DESKTOP_UA_SUFFIX = 'Edg/111.0.1661.62'
 
 const DESKTOP_UA_PREFIX =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'

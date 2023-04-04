@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "$npm_execpath run clean && $npm_execpath run chrome && $npm_execpath run firefox && $npm_execpath run safari && $npm_execpath run zip",
+    "build": "$npm_execpath run clean && $npm_execpath run chrome && $npm_execpath run firefox",
     "chrome": "webpack --config webpack/webpack.chrome.js",
     "firefox": "webpack --config webpack/webpack.firefox.js",
     "safari": "xcrun safari-web-extension-converter release/firefox --swift --no-open --copy-resources --project-location safari --force --bundle-identifier sh.cho.bing-chat-for-all-browsers",
