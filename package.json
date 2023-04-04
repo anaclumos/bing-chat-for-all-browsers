@@ -1,11 +1,14 @@
 {
   "name": "bing-chat-for-all-browsers",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "bing-chat-for-all-browsers",
   "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "$npm_execpath run clean && webpack --config webpack/webpack.chrome.js && webpack --config webpack/webpack.firefox.js",
+    "build": "$npm_execpath run clean && $npm_execpath run chrome && $npm_execpath run firefox",
+    "chrome": "webpack --config webpack/webpack.chrome.js",
+    "firefox": "webpack --config webpack/webpack.firefox.js",
+    "safari": "xcrun safari-web-extension-converter release/firefox --swift --no-open --copy-resources --project-location safari --force --bundle-identifier sh.cho.bing-chat-for-all-browsers",
     "clean": "rimraf release",
     "test": "npx jest",
     "style": "prettier --write \"**/*.{ts,tsx,json,js,jsx,css,scss,html,md}\"",

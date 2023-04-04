@@ -19,12 +19,12 @@ const Popup = () => {
             style={{
               backgroundColor: 'white',
               color: 'black',
-              border: '1px solid rgb(156 163 175)',
+              border: '1px solid rgb(126 133 145)',
               padding: '10px 20px',
               borderRadius: '5px',
               fontSize: '1rem',
               cursor: 'pointer',
-              boxShadow: '0 0 0 1px rgb(156 163 175), 0 1px 3px 0 rgb(156 163 175)',
+              boxShadow: '0 0 0 1px rgb(126 133 145), 0 1px 3px 0 rgb(126 133 145)',
             }}
           >
             <img src={BingIcon} style={{ width: '1rem', height: '1rem', padding: 'auto', verticalAlign: 'middle' }} />
@@ -41,22 +41,10 @@ const Popup = () => {
           fontSize: '0.8rem',
           fontWeight: 400,
           lineHeight: '1.5',
-          color: 'rgb(156 163 175)',
+          color: 'rgb(126 133 145)',
         }}
       >
-        Found a Bug?{' '}
-        <a
-          style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }}
-          onClick={() => {
-            chrome.tabs.create({
-              url: 'https://github.com/anaclumos/bing-chat-for-all-browsers',
-            })
-          }}
-        >
-          Let me know on GitHub
-        </a>
-        {'. '}
-        Or, Leave us a review for{' '}
+        Leave me a review for{' '}
         <a
           style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }}
           onClick={() => {
@@ -78,7 +66,36 @@ const Popup = () => {
         >
           Firefox
         </a>
-        . Thank you!
+        . <br />
+        <br />
+        If you love my work, please check out my other open-sourced AI project,{' '}
+        <a
+          style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }}
+          onClick={() => {
+            chrome.tabs.create({
+              url: 'https://hn.cho.sh/?ref=bingchat&utm_source=bingchat&utm_medium=extension&utm_campaign=bingchat',
+            })
+          }}
+        >
+          hn.cho.sh
+        </a>{' '}
+        — a free AI-summarized newsletter for tech, supporting 29 languages, including Korean, Japanese, English,
+        Chinese and more.
+        <br />
+        <br />
+        <strong>Solution for common problems.</strong> Clear Cache and Cookies on Bing. Disable VPN or Adblock on Bing.
+        Make sure you are logged-in with Microsoft account with Bing Chat enabled. If you still have problems,{' '}
+        <a
+          style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }}
+          onClick={() => {
+            chrome.tabs.create({
+              url: 'https://github.com/anaclumos/bing-chat-for-all-browsers',
+            })
+          }}
+        >
+          Let me know on GitHub
+        </a>
+        {'. '}
       </p>
     </>
   )
