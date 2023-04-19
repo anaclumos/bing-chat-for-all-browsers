@@ -9,14 +9,16 @@ On Chrome (and other chromium based browsers): it will simply append the Microso
 On Firefox it will replace the entire user agent with a hard coded Chrome user agent with the Microsoft Edge useragent suffix appended to it.
 */
 
+const IS_FIREFOX = navigator.userAgent.toLowerCase().includes('firefox')
+
 //Microsoft Edge has two user agent suffixes, one for mobile and one for desktop
-const MOBILE_UA_SUFFIX = 'EdgA/110.0.1587.41'
-const DESKTOP_UA_SUFFIX = 'Edg/111.0.1661.62'
+const MOBILE_UA_SUFFIX = 'EdgA/42.0.0.2057'
+const DESKTOP_UA_SUFFIX = 'Edg/112.0.1722.48'
 
 const DESKTOP_UA_PREFIX =
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36'
 const MOBILE_UA_PREFIX =
-  'Mozilla/5.0 (Linux; Android 13; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36'
+  'Mozilla/5.0 (Linux; Android 8.1.0; Pixel Build/OPM4.171019.021.D1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Mobile Safari/537.36'
 
 //formulate the UserAgent
 const uaMaker = (suffix: string, isMobile: boolean): string => {
@@ -29,31 +31,36 @@ const uaMaker = (suffix: string, isMobile: boolean): string => {
     }
   } else {
     //on Chrome (and other chromium based browsers): it will simply append the Microsoft Edge useragent suffix to the user agent
-    return `${navigator.userAgent}${suffix}`
+    return `${navigator.userAgent} ${suffix}`
   }
 }
 
-chrome.webRequest.onBeforeSendHeaders.addListener(
-  (details) => {
-    const { requestHeaders } = details
-    if (!requestHeaders) return undefined
-    const newHeaders = requestHeaders.map((header) => {
-      if (header.name.toLowerCase() === 'user-agent') {
-        if (header.value?.toLowerCase().includes('mobile')) header.value = uaMaker(MOBILE_UA_SUFFIX, true)
-        else header.value = uaMaker(DESKTOP_UA_SUFFIX, false)
-      }
-      return header
-    })
-    return { requestHeaders: newHeaders }
-  },
-  { urls: ['*://*.bing.com/*'] },
-  ['blocking', 'requestHeaders']
-)
+if (IS_FIREFOX) {
+  chrome.webRequest.onBeforeSendHeaders.addListener(
+    (details) => {
+      const { requestHeaders } = details
+      console.log(requestHeaders)
+      if (!requestHeaders) return undefined
+      const newHeaders = requestHeaders.map((header) => {
+        if (header.name.toLowerCase() === 'user-agent') {
+          if (header.value?.toLowerCase().includes('mobile')) header.value = uaMaker(MOBILE_UA_SUFFIX, true)
+          else header.value = uaMaker(DESKTOP_UA_SUFFIX, false)
+        }
+        return header
+      })
+      return { requestHeaders: newHeaders }
+    },
+    { urls: ['*://*.bing.com/*'] },
+    ['blocking', 'requestHeaders']
+  )
+}
 
 chrome.runtime.onInstalled.addListener((object) => {
-  let externalUrl = 'http://github.com/anaclumos/bing-chat-for-all-browsers#firefox'
-  console.log(object.reason)
+  let install = 'http://github.com/anaclumos/bing-chat-for-all-browsers/tree/main/install.md'
+  let uninstall = 'http://github.com/anaclumos/bing-chat-for-all-browsers/tree/main/uninstall.md'
   if (object.reason.toLowerCase().includes('install')) {
-    chrome.tabs.create({ url: externalUrl })
+    chrome.tabs.create({ url: install })
+  } else if (object.reason.toLowerCase().includes('uninstall')) {
+    chrome.tabs.create({ url: uninstall })
   }
 })
