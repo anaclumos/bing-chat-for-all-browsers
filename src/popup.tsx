@@ -69,7 +69,7 @@ const Popup = () => {
         </a>
         . <br />
         <br />
-        Please check out {' '}
+        Please check out{' '}
         <a
           style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }}
           onClick={() => {
@@ -80,7 +80,8 @@ const Popup = () => {
         >
           Oneliner News
         </a>{' '}
-        — my newsletter AI that reads 3M+ words a day and gives you an <strong>one-liner</strong> explanation.<br />
+        — my newsletter AI that reads 3M+ words a day and gives you an <strong>one-liner</strong> explanation.
+        <br />
         <br />
         <br />
         <strong>Solution for common problems.</strong> Clear Cache and Cookies on Bing. Disable VPN or Adblock on Bing.

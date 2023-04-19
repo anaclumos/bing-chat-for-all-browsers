@@ -4,4 +4,3 @@
 
 > **Note**<br/> **You need a Microsoft account that has access to the new Bing Chat to use this extension!**
 > If you don't have access to the new Bing Chat, you can join the waitlist at [bing.com/chat](https://bing.com/chat).
-
