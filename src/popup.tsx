@@ -49,7 +49,8 @@ const Popup = () => {
           style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }}
           onClick={() => {
             chrome.tabs.create({
-              url: 'https://chrome.google.com/webstore/detail/bing-chat-for-all-browser/jofbglonpbndadajbafmmaklbfbkggpo',
+              url:
+                'https://chrome.google.com/webstore/detail/bing-chat-for-all-browser/jofbglonpbndadajbafmmaklbfbkggpo',
             })
           }}
         >
@@ -68,7 +69,7 @@ const Popup = () => {
         </a>
         . <br />
         <br />
-        If you love my work, please check out my other open-sourced AI project,{' '}
+        Please check out {' '}
         <a
           style={{ color: 'black', textDecoration: 'underline', cursor: 'pointer' }}
           onClick={() => {
@@ -77,10 +78,9 @@ const Popup = () => {
             })
           }}
         >
-          hn.cho.sh
+          Oneliner News
         </a>{' '}
-        — a free AI-summarized newsletter for tech, supporting 29 languages, including Korean, Japanese, English,
-        Chinese and more.
+        — my newsletter AI that reads 3M+ words a day and gives you an <strong>one-liner</strong> explanation.<br />
         <br />
         <br />
         <strong>Solution for common problems.</strong> Clear Cache and Cookies on Bing. Disable VPN or Adblock on Bing.
