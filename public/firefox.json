@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Bing Chat for All Browsers",
   "description": "Bing Chat for All Browsers",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "background": {
     "scripts": ["js/background.js"]
   },
