@@ -8,12 +8,47 @@
         {
           "header": "User-Agent",
           "operation": "set",
-          "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/111.0.1661.62"
+          "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.48"
+        },
+        {
+          "header": "useragentreductionoptout",
+          "operation": "set",
+          "value": "A7kgTC5xdZ2WIVGZEfb1hUoNuvjzOZX3VIV/BA6C18kQOOF50Q0D3oWoAm49k3BQImkujKILc7JmPysWk3CSjwUAAACMeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiU2VuZEZ1bGxVc2VyQWdlbnRBZnRlclJlZHVjdGlvbiIsImV4cGlyeSI6MTY4NDg4NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="
+        },
+        {
+          "header": "Sec-CH-UA",
+          "operation": "set",
+          "value": "\"Chromium\";v=\"112\", \"Microsoft Edge\";v=\"112\", \"Not:A-Brand\";v=\"99\""
+        },
+        {
+          "header": "Sec-CH-UA-Arch",
+          "operation": "set",
+          "value": "x86"
+        },
+        {
+          "header": "Sec-CH-UA-Bitness",
+          "operation": "set",
+          "value": "64"
+        },
+        {
+          "header": "Sec-CH-UA-Full-Version",
+          "operation": "set",
+          "value": "112.0.1722.48"
+        },
+        {
+          "header": "Sec-CH-UA-Full-Version-List",
+          "operation": "set",
+          "value": "\"Chromium\";v=\"112.0.5615.121\", \"Microsoft Edge\";v=\"112.0.1722.48\", \"Not:A-Brand\";v=\"99.0.0.0\""
+        },
+        {
+          "header": "Sec-MS-GEC-Version",
+          "operation": "set",
+          "value": "1-112.0.1722.48"
         }
       ]
     },
     "condition": {
-      "regexFilter": ".*bing\\.com.*",
+      "regexFilter": ".*bing.com.*",
       "resourceTypes": ["main_frame"]
     }
   }
