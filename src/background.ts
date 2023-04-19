@@ -57,10 +57,9 @@ if (IS_FIREFOX) {
 
 chrome.runtime.onInstalled.addListener((object) => {
   let install = 'http://github.com/anaclumos/bing-chat-for-all-browsers/tree/main/install.md'
-  let uninstall = 'http://github.com/anaclumos/bing-chat-for-all-browsers/tree/main/uninstall.md'
   if (object.reason.toLowerCase().includes('install')) {
     chrome.tabs.create({ url: install })
-  } else if (object.reason.toLowerCase().includes('uninstall')) {
-    chrome.tabs.create({ url: uninstall })
   }
 })
+
+chrome.runtime.setUninstallURL('http://github.com/anaclumos/bing-chat-for-all-browsers/tree/main/uninstall.md')

@@ -83,7 +83,6 @@ const Popup = () => {
         — my newsletter AI that reads 3M+ words a day and gives you an <strong>one-liner</strong> explanation.
         <br />
         <br />
-        <br />
         <strong>Solution for common problems.</strong> Clear Cache and Cookies on Bing. Disable VPN or Adblock on Bing.
         Make sure you are logged-in with Microsoft account with Bing Chat enabled. If you still have problems,{' '}
         <a

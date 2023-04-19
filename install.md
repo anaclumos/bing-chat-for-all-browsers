@@ -13,4 +13,3 @@ Some of the common problems people get:
 - ✅ Loved by engineers at Apple, Microsoft, Amazon, Goldman Sachs, and More
 - ✅ Completely Free
 - ✅ State-of-the-art i18n, Supports 29 Languages
-
