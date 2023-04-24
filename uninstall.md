@@ -1,6 +1,6 @@
 # Give Me One More Chance!
 
-Most people fixed their problems with the following quick fixes. Try the followings:
+### Most people fixed their problems with the following quick fixes.
 
 - Clear the cache and cookies on bing.com.
 - Whitelist bing.com if you have any Adblock or VPN.
