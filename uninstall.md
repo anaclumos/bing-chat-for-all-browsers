@@ -19,5 +19,10 @@
 
 ## Reinstall Links:
 
-[![Chrome Web Store](./misc/chrome-download.png)](https://chrome.google.com/webstore/detail/bing-chat-for-all-browser/jofbglonpbndadajbafmmaklbfbkggpo)
-[![Firefox Addons Store](./misc/firefox-download.png)](https://addons.mozilla.org/en-US/firefox/addon/bing-chat-for-all-browsers/)
+<a href="https://chrome.google.com/webstore/detail/bing-chat-for-all-browser/jofbglonpbndadajbafmmaklbfbkggpo">
+
+<img src="./misc/chrome-download.png" alt="Chrome Web Store" height="100" />
+</a>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/bing-chat-for-all-browsers/">
+<img src="./misc/firefox-download.png" alt="Chrome Web Store" height="100" />
+</a>
