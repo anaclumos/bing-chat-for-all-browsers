@@ -2,7 +2,7 @@
 
 # Bing Chat for All Browsers
 
-> **Note**<br/> **You need a Microsoft account that has access to the new Bing Chat to use this extension!**
+> **Note**<br/> **You need a MS account with Bing Chat access!**
 
 <a href="https://chrome.google.com/webstore/detail/bing-chat-for-all-browser/jofbglonpbndadajbafmmaklbfbkggpo">
 
