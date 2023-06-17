@@ -2,6 +2,7 @@ const { merge } = require('webpack-merge')
 const CopyPlugin = require('copy-webpack-plugin')
 const path = require('path')
 const common = require('./webpack.common.js')
+const webpack = require("webpack");
 
 module.exports = merge(common, {
   mode: 'production',
@@ -10,6 +11,9 @@ module.exports = merge(common, {
     filename: '[name].js',
   },
   plugins: [
+    new webpack.DefinePlugin({
+      firefox: JSON.stringify(false),
+    }),
     new CopyPlugin({
       patterns: [
         {
