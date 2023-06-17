@@ -9,7 +9,7 @@ On Chrome (and other chromium based browsers): it will simply append the Microso
 On Firefox it will replace the entire user agent with a hard coded Chrome user agent with the Microsoft Edge useragent suffix appended to it.
 */
 
-declare var firefox : boolean | undefined;
+declare var firefox: boolean | undefined;
 
 //Microsoft Edge has two user agent suffixes, one for mobile and one for desktop
 const MOBILE_UA_SUFFIX = 'EdgA/42.0.0.2057'
@@ -23,10 +23,14 @@ const MOBILE_UA_PREFIX =
 //formulate the UserAgent
 const uaMaker = (isMobile: boolean): string => {
   if (firefox) {
-    return `${MOBILE_UA_PREFIX} ${MOBILE_UA_SUFFIX}`
+    //on Firefox, we replace the entire user agent with a hard coded Chrome user agent with the Microsoft Edge useragent suffix appended to it.
+    if (isMobile) {
+      return `${MOBILE_UA_PREFIX} ${MOBILE_UA_SUFFIX}`
+    }
   }
   return `${DESKTOP_UA_PREFIX} ${DESKTOP_UA_SUFFIX}`
 }
+
 
 chrome.webRequest.onBeforeSendHeaders.addListener((details) => {
   const { requestHeaders } = details
