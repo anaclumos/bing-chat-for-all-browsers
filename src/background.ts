@@ -9,7 +9,7 @@ On Chrome (and other chromium based browsers): it will simply append the Microso
 On Firefox it will replace the entire user agent with a hard coded Chrome user agent with the Microsoft Edge useragent suffix appended to it.
 */
 
-const IS_FIREFOX = navigator.userAgent.toLowerCase().includes('firefox')
+declare var firefox: boolean | undefined;
 
 //Microsoft Edge has two user agent suffixes, one for mobile and one for desktop
 const MOBILE_UA_SUFFIX = 'EdgA/42.0.0.2057'
@@ -21,39 +21,35 @@ const MOBILE_UA_PREFIX =
   'Mozilla/5.0 (Linux; Android 8.1.0; Pixel Build/OPM4.171019.021.D1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Mobile Safari/537.36'
 
 //formulate the UserAgent
-const uaMaker = (suffix: string, isMobile: boolean): string => {
-  if (navigator.userAgent.includes('Firefox')) {
+const uaMaker = (isMobile: boolean): string => {
+  if (firefox) {
     //on Firefox, we replace the entire user agent with a hard coded Chrome user agent with the Microsoft Edge useragent suffix appended to it.
     if (isMobile) {
-      return `${MOBILE_UA_PREFIX} ${suffix}`
-    } else {
-      return `${DESKTOP_UA_PREFIX} ${suffix}`
+      return `${MOBILE_UA_PREFIX} ${MOBILE_UA_SUFFIX}`
     }
-  } else {
-    //on Chrome (and other chromium based browsers): it will simply append the Microsoft Edge useragent suffix to the user agent
-    return `${navigator.userAgent} ${suffix}`
   }
+  return `${DESKTOP_UA_PREFIX} ${DESKTOP_UA_SUFFIX}`
 }
 
-if (IS_FIREFOX) {
-  chrome.webRequest.onBeforeSendHeaders.addListener(
-    (details) => {
-      const { requestHeaders } = details
-      console.log(requestHeaders)
-      if (!requestHeaders) return undefined
-      const newHeaders = requestHeaders.map((header) => {
-        if (header.name.toLowerCase() === 'user-agent') {
-          if (header.value?.toLowerCase().includes('mobile')) header.value = uaMaker(MOBILE_UA_SUFFIX, true)
-          else header.value = uaMaker(DESKTOP_UA_SUFFIX, false)
-        }
-        return header
-      })
-      return { requestHeaders: newHeaders }
-    },
-    { urls: ['*://*.bing.com/*'] },
-    ['blocking', 'requestHeaders']
-  )
-}
+
+chrome.webRequest.onBeforeSendHeaders.addListener((details) => {
+  const { requestHeaders } = details
+
+  if (!requestHeaders)
+    return undefined
+
+  const newHeaders = requestHeaders.map((header) => {
+    if (header.name.toLowerCase() === 'user-agent') {
+      const isMobile: boolean = header.value?.toLowerCase().includes('mobile') ?? false;
+      header.value = uaMaker(isMobile);
+    }
+    return header
+  })
+  return { requestHeaders: newHeaders }
+},
+  { urls: ['*://*.bing.com/*'] },
+  ['blocking', 'requestHeaders']
+);
 
 chrome.runtime.onInstalled.addListener((object) => {
   let install = 'http://github.com/anaclumos/bing-chat-for-all-browsers/tree/main/install.md'
